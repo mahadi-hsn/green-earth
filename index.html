@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Earth</title>
+
+    <!-- Daisy UI, Tailwind and CSS integration -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+</head>
+
+<body>
+    <h1 class="text-5xl text-center font-semibold bg-green-400 py-4 mb-8">Choose your tree</h1>
+    <section class="w-10/12 mx-auto grid grid-cols-12 gap-4">
+        <div class="col-span-3 space-y-3">
+            <h1 class="text-xl font-bold text-center">Categories</h1>
+            <button class="btn text-white btn-success w-full">All Categories</button>
+            <div id="categoryContainer" class="space-y-3">
+            </div>
+        </div>
+        <div class="bg-teal-400 col-span-6">tree</div>
+        <div class="bg-slate-400 col-span-3">add to cart</div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
