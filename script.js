@@ -1,3 +1,12 @@
+const LoadingSpinner = document.getElementById('LoadingSpinner');
+
+const showLoading = () =>{
+  LoadingSpinner.classList.remove('hidden');
+}
+const hideLoading = () =>{
+  LoadingSpinner.classList.add('hidden');
+}
+
 const loadCategories = async () => {
   const response = await fetch(
     "https://openapi.programming-hero.com/api/categories",
@@ -18,9 +27,11 @@ loadCategories();
 
 
 const loadAllPlants = async () => {
+  showLoading();
   const response = await fetch(
     "https://openapi.programming-hero.com/api/plants",
   );
+  hideLoading();
   const data = await response.json();
   displayAllPlants(data.plants);
 };
