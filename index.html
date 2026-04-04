@@ -12,16 +12,17 @@
 </head>
 
 <body>
-    <h1 class="text-5xl text-center font-semibold bg-green-400 py-4 mb-8">Choose your tree</h1>
+    <h1 class="text-5xl text-center font-semibold bg-green-400 py-4 mb-8 cursor-pointer">Choose your tree</h1>
 
 
     <section class="w-11/12 mx-auto grid grid-cols-12 gap-4">
 
         <!-- Category Section -->
-        <div class="col-span-2 space-y-3">
-            <h1 class="text-xl font-bold text-center">Categories</h1>
-            <button class="btn text-white btn-success w-full">All Categories</button>
-            <div id="categoryContainer" class="space-y-3">
+        <div class="col-span-2 space-y-3 sticky top-8">
+            <div id="categoryContainer" class="space-y-3 sticky top-8">
+                <h1 class="text-xl font-bold text-center">Categories</h1>
+                <button id="allCategory" onclick="loadAllPlants()" class="btn btn-success w-full active">All
+                    Categories</button>
             </div>
         </div>
 
@@ -29,11 +30,18 @@
         <div class="col-span-8">
             <div id="treeContainer" class="grid grid-cols-3 gap-4">
             </div>
-            
             <!-- Loading spinner -->
-             <div id="LoadingSpinner" class="flex h-[60vh] justify-center items-center hidden">
+            <div id="LoadingSpinner" class="flex h-[60vh] justify-center items-center hidden">
                 <span class="loading loading-ball loading-xl"></span>
-             </div>
+            </div>
+
+
+
+            <!-- Open the modal using ID.showModal() method -->
+            <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+            <dialog id="plantModal" class="modal">
+            
+            </dialog>
         </div>
 
         <!-- Add to cart -->
