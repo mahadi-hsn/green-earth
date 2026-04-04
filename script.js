@@ -79,21 +79,20 @@ const loadPlantData = async (id) => {
 const displayPlantData = (plants) =>{
   console.log(plants.name);
   plantModal.innerHTML = `
-  <div class="modal-box bg-slate-950 space-y-3">
-                    <h3 class="text-lg font-bold text-green-400">Tree Details!</h3>
+                <div class="modal-box bg-slate-950 space-y-3">
+                    <h3 class="text-2xl text-center font-bold text-green-400">Tree Details</h3>
                     <img class="rounded-md w-full h-72 object-cover" src="${plants.image}" alt="${plants.name}">
                     <h3 class="text-lg font-bold text-green-400">${plants.name}</h3>
-                    <p class="py-4 text-white">${plants.description}</p>
-                    <p class="py-4 text-white">Category: ${plants.category}</p>
+                    <p class="text-white">${plants.description}</p>
+                    <p class="text-lg font-bold text-green-400">Category: <span class="text-base font-bold text-white">${plants.category}</span> </p>
+                    <div class="flex justify-between items-center">
                     <h3 class="text-lg font-bold text-green-400">Price: $${plants.price}</h3>
-                    
-                    <div class="modal-action">
-                        <form method="dialog">
-                            <!-- if there is a button in form, it will close the modal -->
-                            <button class="btn">Close</button>
-                        </form>
+                    <button class="btn btn-success text-white rounded-full">Add to Cart</button>
                     </div>
                 </div>
+                <form method="dialog" class="modal-backdrop">
+                    <button>close</button>
+                </form>
   `
   plantModal.showModal();
 }
