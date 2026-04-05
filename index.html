@@ -19,7 +19,7 @@
     <section class="w-11/12 mx-auto grid grid-cols-12 gap-4">
 
         <!-- Category Section -->
-        <div class="col-span-3 space-y-3 sticky top-8">
+        <div class="col-span-2 space-y-3 sticky top-8">
             <div id="categoryContainer" class="space-y-3 sticky top-8">
                 <h1 class="text-xl font-bold text-center">Categories</h1>
                 <button id="allCategory" onclick="loadAllPlants()" class="btn btn-success w-full active">All
@@ -28,7 +28,7 @@
         </div>
 
         <!-- Tree Section -->
-        <div class="col-span-6">
+        <div class="col-span-8">
 
             <div id="treeContainer" class="grid grid-cols-3 gap-4"></div>
 
@@ -43,19 +43,17 @@
         </div>
 
         <!-- Add to cart -->
-        <div class="card card-body shadow-xl bg-green-200 text-white col-span-3">
+        <div class="card card-body shadow-xl bg-green-200 text-white col-span-2">
             <h2 class="text-center text-xl font-bold">Cart</h2>
-            <div class="space-y-4">
-                <div class="card card-body shadow-lg bg-slate-400 space-y-4">
-                    <div class="flex justify-between items-center">
-                        <div>
-                            <h2>Name</h2>
-                            <p>12000 x 10</p>
-                        </div>
-                        <button class="btn btn-ghost">X</button>
-                    </div>
-                    <p class="text-right">$500</p>
-                </div>
+
+            <div id="cartContainer" class="space-y-4">     
+               
+            </div>
+
+            <!-- Total Price -->
+            <div class="flex-row justify-between items-center card shadow-lg bg-slate-400 p-4 my-4">
+                <span>Total</span>
+                <span id="totalPrice">$0</span>
             </div>
         </div>
     </section>
